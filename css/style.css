@@ -2,6 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
 }
 
 body {
@@ -92,17 +93,76 @@ body {
 /* Carousel */
 
 .carousel{
-    
+    padding-top: 180px;
+    overflow: hidden;
+    background-image: url(../image/pic2.png);
+    background-position: top;
+    background-size: 100%;
 }
-.carousel .carousel-container{
-    position: absolute;
-    top:200px;
+.carousel.container{
     max-width: 1199px;
     margin: auto;
 }
-.carousel .carousel-container .carousel-content{
-
+.carousel .carousel-container{
+   display: flex;
+   align-items: center;
 }
+.carousel .carousel-container .carousel-content{
+    width: 60%;
+}
+.carousel .carousel-container .carousel-content .btn-grad{
+    background-image: linear-gradient(to right, #DE6262 0%, #FFB88C 51%, #DE6262 100%);
+    margin: 10px;
+    padding: 15px 30px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: .5s;
+    background-size: 200% auto;
+    color: #fff;
+    box-shadow: 0 0 20px #eee;
+    border-radius: 40px;
+    display: block;
+    border: 0;
+    font-size: 16px;
+    animation: fadetoUp 9s;
+}
+.carousel .carousel-container .carousel-content .btn-grad:hover{
+    background-position: right center;
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+}
+.carousel .carousel-container .carousel-content h3{
+    font-weight: 600;
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: #f55f8d;
+}
+.carousel .carousel-container .carousel-content h1{
+    color: #000;
+    font-size: 70px;
+    line-height: 1em;
+    margin-bottom: 20px;
+}
+.carousel .carousel-container .carousel-content p{
+    color: #000;
+    font-size: 18px;
+    line-height: 1.5em;
+    margin-bottom: 20px;
+}
+
+.carousel .carousel-container .carousel-content li{
+    font-size: 18px;    
+    line-height: 1.5em;
+    margin-bottom: 20px;
+}
+
+.carousel .carousel-container .carousel-image {
+    width: 570px;
+    margin-left: 50px;
+}
+
+
 
 @keyframes uptoDown{
     49%{
@@ -115,4 +175,34 @@ body {
     51%{
         opacity: 1;
     }
+}
+
+@keyframes fadetoUp{
+    0%{
+        opacity: 0;
+        transform: translate3d(0,100%, 0);
+    }
+    100%{
+        opacity: 1;
+        transform: translateZ(0);
+    }
+}
+.animate_fadetoUp{
+    animation-name: fadetoUp;
+}
+.animate_animated{
+    animation-duration: 2s;
+    animation-fill-mode: both;
+}
+.animate_delay_1s{
+    animation-delay: 1s;
+}
+.animate_delay_2s{
+    animation-delay: 2s;
+}
+.animate_delay_3s{
+    animation-delay: 3s;
+}
+.animate_delay_4s{
+    animation-delay: 4s;
 }
